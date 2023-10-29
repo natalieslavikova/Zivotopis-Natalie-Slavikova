@@ -1,0 +1,279 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Lora', serif;
+    background-color: white;
+}
+
+
+h1 {font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	color: #3e606b;
+	font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+}
+
+.hlavicka {
+	max-width: 1100px;
+	margin: auto;
+}
+
+.foto img {
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    border: 3px solid white
+}
+
+.foto::after {
+    content: "";
+    display: block;
+    margin: auto;
+    padding: 0;
+    border-radius: 50%;
+    width: 90%;
+    height: 2px; 
+    background-color: #fdaded;
+    margin-top: 10px;
+}
+
+p {
+   margin-top: 8px;
+}
+
+.hlavicka-pruh {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 20px ;
+}
+
+.menu {
+    
+    display: flex; 
+    width: 100%;
+}
+
+.menu__checkbox {
+    display: none;
+}
+
+.menu__toggler {
+	cursor: pointer;
+    color: #3e606b; 
+    font-size: 20px; 
+}
+
+.menu__list {
+     display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.menu__item {
+	border-bottom: 1px solid #3e606b;
+}
+
+.menu__link {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #3e606b;
+}
+
+.menu__link:hover {
+background-color: #3e606b36;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+.pdf img {
+    width: 25px;
+    height:25px;
+    vertical-align: middle;
+}
+
+.pdf {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+}
+
+/*.menu {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    justify-content: center; 
+  }
+
+  .menu a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #3e606b;
+    margin: 0;
+    padding: 5px 10px;
+  }
+  
+  .menu a:hover {
+    background-color: #fdaded;
+    color: white;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .tlacitka {
+	display: inline-block;
+	background-color: #f195b2;
+	padding: 15px 40px;
+	border-radius: 30px;
+	margin-top: 50px;
+    }
+
+    .tlacitko {
+        color: white;
+        text-decoration: none;
+    }
+
+    .tlacitka:hover,
+    .tlacitka:active {
+        background-color: #d2567d;
+    }
+
+    */
+
+    .osobni-udaje {
+        background-color:#303339;
+        color:white;
+    }
+
+    .osobni-udaje h2 {
+        padding-top: 30px;
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .menu-udaje {
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .menu-udaje li {
+        padding-bottom: 5px;
+    }
+
+    .sekce-bila {
+        background-color: white;
+        color:black;
+        text-align: center;
+        padding: 0 30px 30px 30px;
+    }
+
+    .bila h2,
+    .seda h2 {
+        padding-top: 30px;
+        color: #3e606b;
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        line-height: 1.25;
+        text-align: center;
+        margin: 0;
+    }
+
+    .bila h3,
+    .seda h3 {
+        padding-top: 10px;
+        color: #3e606b;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .sekce-seda {
+        background-color: rgb(240, 240, 240);
+        color:black;
+        text-align: center;
+        padding: 0 30px 30px 30px;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        padding-bottom: 10px;
+      }
+    
+    .social img {
+        max-width: 25px;
+        margin-right: 5px;
+    }
+    
+    .social-second img {
+        max-width: 35px;
+        padding:0
+    }
+
+    .projekt-masaze img {
+        max-width: 50%;
+    }
+
+    .projekt-github img {
+        max-width: 50%;
+    }
+
+
+    
+@media screen and (max-width: 799px){
+
+    .menu__checkbox:checked ~ .menu__list {
+        display: block;
+    }
+    }
+    
+    @media screen and (min-width: 800px){
+    
+        .menu__toggler {
+            display: none;
+        }
+    
+        .menu__list {
+        display: flex;
+        }
+    
+        .menu__item {
+            border-right: 1px solid white;
+            border-bottom: 0;
+        }
+    
+    }
