@@ -1,11 +1,15 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
+
+
 body {
 	font-size: 16px;
 	line-height: 1.5;
 	font-family: 'Lora', serif;
     background-color: white;
+    max-width: 1200px;
+    margin: auto;
 }
 
 
@@ -18,16 +22,16 @@ h1 {font-family: 'Playfair Display', serif;
 }
 
 .hlavicka {
-	max-width: 1100px;
+	max-width: 1300px;
 	margin: auto;
 }
 
 .foto img {
-    width: 150px;
-    border-radius: 50%;
+    max-width: 40%;
+    border-radius: 10%;
     margin: auto;
     display: block;
-    border: 3px solid white
+    
 }
 
 .foto::after {
@@ -54,7 +58,6 @@ p {
 }
 
 .menu {
-    
     display: flex; 
     width: 100%;
 }
@@ -62,6 +65,7 @@ p {
 .menu__checkbox {
     display: none;
 }
+
 
 .menu__toggler {
 	cursor: pointer;
@@ -115,65 +119,14 @@ ul {
     margin-left: auto;
 }
 
-/*.menu {
-    display: flex;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Playfair Display', serif;
-    justify-content: center; 
-  }
-
-  .menu a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    color: #3e606b;
-    margin: 0;
-    padding: 5px 10px;
-  }
-  
-  .menu a:hover {
-    background-color: #fdaded;
-    color: white;
-  }
-  
-  .menu li {
-    list-style: none;
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  .tlacitka {
-	display: inline-block;
-	background-color: #f195b2;
-	padding: 15px 40px;
-	border-radius: 30px;
-	margin-top: 50px;
-    }
-
-    .tlacitko {
-        color: white;
-        text-decoration: none;
-    }
-
-    .tlacitka:hover,
-    .tlacitka:active {
-        background-color: #d2567d;
-    }
-
-    */
-
-    .osobni-udaje {
-        background-color:#303339;
-        color:white;
+.osobni-udaje {
+    background-color:#303339;
+     color:#fdfbf7;
     }
 
     .osobni-udaje h2 {
         padding-top: 30px;
-        color: white;
+        color: #fdfbf7;
         font-family: 'Playfair Display', serif;
         font-size: 25px;
         line-height: 1.25;
@@ -191,7 +144,7 @@ ul {
     }
 
     .sekce-bila {
-        background-color: white;
+        background-color: #fdfbf7;
         color:black;
         text-align: center;
         padding: 0 30px 30px 30px;
@@ -252,17 +205,46 @@ ul {
         max-width: 50%;
     }
 
+    .foto-certifikat {
+        max-width: 40%;
+        margin: auto;
+        display: block;
+    }
+
 
     
-@media screen and (max-width: 799px){
+    @media screen and (min-width: 799px) {
 
     .menu__checkbox:checked ~ .menu__list {
         display: block;
     }
+
+    .jazyky     {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
     }
     
-    @media screen and (min-width: 800px){
-    
+    .projekty {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .osvedceni {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(33% - 20px), 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .hlavicka-pruh {
+        margin: 0;
+        background-color: #fdfbf7;
+    }
+
         .menu__toggler {
             display: none;
         }
@@ -272,8 +254,76 @@ ul {
         }
     
         .menu__item {
-            border-right: 1px solid white;
             border-bottom: 0;
+            
+            
         }
-    
+
+    .menu-udaje li,
+    .osobni-udaje h2 {
+        text-align: left;
+        padding-left: 20%;
+        
     }
+
+    .uvod {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start; 
+    }
+    
+    .nadpis {
+        width: 100%;
+        text-align: center;
+        background-color: #303339;
+        padding-top: 20px;
+        margin: 0; 
+    }
+    
+    h1 {
+        color: #fdfbf7;
+        font-size: 35px;
+        margin: 0; 
+    }
+    
+    .obsah {
+        display: flex; 
+        width: 100%; 
+    }
+    
+    .osobni-udaje {
+        width: 50%;
+        padding-top: 10px;
+    }
+    
+    .media {
+      align-items: center;
+      width: 75%;
+       
+      }
+
+    .foto {
+        width: 50%;
+        background-color: #303339;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        padding: 40px;
+        
+    }
+    
+    .foto img {
+        max-width: 100%;
+        border-radius: 2%;
+        border: 0px;
+    }
+    
+    .foto::after {
+        visibility: hidden;
+        margin: 0;
+    }
+}
+    
+
+
